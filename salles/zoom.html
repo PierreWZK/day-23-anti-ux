@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le zoom sans frein · Salle 05 · Anti-UX</title>
+  <meta name="description" content="Le zoom sans frein. Un zoom borné (ici 100 à 300 %), avec « − », « + », « Réinitialiser », le niveau affiché, et un défilement pour explorer. Ne jamais bloquer le zoom natif (user-scalable=no).">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/zoom.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Le zoom sans frein · Salle 05 · Anti-UX">
+  <meta property="og:description" content="Le zoom sans frein. Un zoom borné (ici 100 à 300 %), avec « − », « + », « Réinitialiser », le niveau affiché, et un défilement pour explorer. Ne jamais bloquer le zoom natif (user-scalable=no).">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/zoom.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le zoom sans frein · Salle 05 · Anti-UX">
+  <meta name="twitter:description" content="Le zoom sans frein. Un zoom borné (ici 100 à 300 %), avec « − », « + », « Réinitialiser », le niveau affiché, et un défilement pour explorer. Ne jamais bloquer le zoom natif (user-scalable=no).">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-a">Aile A · Gestes et boutons</a></li>
+          <li><span aria-current="page">Salle 05</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 05</span> <span>Aile A · Gestes et boutons</span></p>
+        <h1>Le zoom sans frein</h1>
+        <p class="lede">Un zoom bloqué, ou incontrôlable.</p>
+        <p class="progress" id="progress-zoom" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-zoom" data-specimen="zoom" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-zoom" aria-labelledby="titre-mal-zoom">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-zoom">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Zoomez sur le plan, puis revenez à la vue d’ensemble.</p>
+          <div class="specimen-content">
+            <div class="zoom-view" data-r="view"><div class="zoom-map" data-r="map" aria-hidden="true">🏠 🌳 🏫<br>🏪 📍 🏥<br>🌳 🚉 🏠</div></div>
+            <button type="button" class="btn btn-muet" data-r="plus" aria-label="Zoomer">+</button>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-zoom" aria-labelledby="titre-bien-zoom">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-zoom">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <div class="zoom-view scroll" data-r="view"><div class="zoom-map" data-r="map" role="img" aria-label="Plan du quartier">🏠 🌳 🏫<br>🏪 📍 🏥<br>🌳 🚉 🏠</div></div>
+            <div class="toolbar">
+              <button type="button" class="btn btn-muet btn-sm" data-r="minus" aria-label="Dézoomer">−</button>
+              <output class="zoom-level" data-r="level" aria-live="polite">100 %</output>
+              <button type="button" class="btn btn-muet btn-sm" data-r="plus" aria-label="Zoomer">+</button>
+              <button type="button" class="btn btn-muet btn-sm" data-r="reset">Réinitialiser</button>
+            </div>
+          </div>
+          <div class="unlock-overlay" id="overlay-zoom">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-zoom">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-zoom" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 05</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Le bouton « + » zoome sans limite, il n’y a ni « − » ni réinitialisation, et le niveau n’est jamais affiché. Après trois clics, on ne voit plus qu’un pixel géant.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Un zoom borné (ici 100 à 300 %), avec « − », « + », « Réinitialiser », le niveau affiché, et un défilement pour explorer. Ne jamais bloquer le zoom natif (user-scalable=no).</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener">WCAG 1.4.4 · Redimensionnement du texte</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>&lt;meta name=&quot;viewport&quot;
+  content=&quot;width=device-width, user-scalable=no&quot;&gt;
+plus.onclick = () =&gt; (zoom *= 1.8);</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>const MIN = 1, MAX = 3, PAS = 0.25;
+function zoomer(delta) {
+  zoom = Math.min(MAX, Math.max(MIN, zoom + delta));
+  carte.style.transform = 'scale(' + zoom + ')';
+  niveau.value = Math.round(zoom * 100) + ' %';
+  moins.disabled = zoom === MIN;
+  plus.disabled = zoom === MAX;
+}</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <a class="pager-link prev" href="notation.html" rel="prev">
+              <span class="pager-dir"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Salle précédente</span>
+              <span class="pager-title"><span class="inv">04</span> La note sous condition</span>
+            </a>
+            <a class="pager-link next" href="suppression.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">06</span> La corbeille piégée</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

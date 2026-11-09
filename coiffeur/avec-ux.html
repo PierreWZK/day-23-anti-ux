@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coiffeur Antique, version avec UX · Pièce maîtresse · Anti-UX</title>
+  <meta name="description" content="La pièce maîtresse du musée Anti-UX, réparée : la même page de contact, sans aucune des dix erreurs. À comparer avec la version ratée.">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/coiffeur/avec-ux.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coiffeur Antique, version avec UX · Anti-UX">
+  <meta property="og:description" content="La même page de contact, réparée : quatre liens, quatre champs, des retours clairs.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/coiffeur/avec-ux.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="avec-ux">
+  <a class="sr-only" href="#contenu">Aller au contenu</a>
+  <div class="musee-bar" role="region" aria-label="Musée Anti-UX">
+    <div class="container">
+      <p><strong>Pièce maîtresse · Version réparée.</strong> Les dix erreurs de la version ratée sont corrigées.</p>
+      <button type="button" id="toggle-pins" aria-pressed="false">Montrer les corrections</button>
+      <a href="sans-ux.html">Version ratée</a>
+      <a href="../index.html#piece-maitresse">Retour au musée</a>
+    </div>
+  </div>
+
+  <header class="salon-header">
+    <div class="container">
+      <a class="salon-logo" href="#contenu">Coiffeur <span>Antique</span></a>
+      <nav class="salon-nav" aria-label="Navigation du salon" data-pin="1">
+        <a href="#prestations" data-404>Prestations</a>
+        <a href="#tarifs" data-404>Tarifs</a>
+        <a href="#salon" data-404>Le salon</a>
+        <a href="#contenu" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="salon-main">
+    <div class="container">
+      <section class="salon-hero">
+        <h1>Prendre rendez-vous</h1>
+        <p data-pin="2">Nous répondons sous 24 h ouvrées. <strong>Annulation gratuite jusqu’à 48 h avant</strong>, ensuite le rendez-vous est facturé.</p>
+      </section>
+
+      <div class="salon-grid">
+        <form class="form" id="form-avec" novalidate aria-describedby="form-note">
+          <p id="form-note" class="hint" data-pin="6">Tous les champs sont obligatoires, sauf mention « facultatif ».</p>
+          <div class="resume-erreurs" id="resume" tabindex="-1" hidden data-pin="7">
+            <h2>Deux minutes, il reste à corriger :</h2>
+            <ul id="resume-liste"></ul>
+          </div>
+          <div class="succes" id="succes" role="status" tabindex="-1" hidden>
+            <h2>Demande envoyée</h2>
+            <p id="succes-texte"></p>
+          </div>
+
+          <div class="field" data-pin="4">
+            <label for="a-nom">Nom et prénom</label>
+            <input id="a-nom" name="nom" autocomplete="name" aria-describedby="a-nom-err">
+            <p class="err" id="a-nom-err"></p>
+          </div>
+          <div class="field">
+            <label for="a-mail">Email</label>
+            <input id="a-mail" name="email" type="email" autocomplete="email" aria-describedby="a-mail-hint a-mail-err">
+            <p class="hint" id="a-mail-hint">Pour vous envoyer la confirmation.</p>
+            <p class="err" id="a-mail-err"></p>
+          </div>
+          <div class="field" data-pin="5">
+            <label for="a-tel">Téléphone <span class="opt">(facultatif)</span></label>
+            <input id="a-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="a-tel-hint a-tel-err">
+            <p class="hint" id="a-tel-hint">Avec ou sans espaces, par exemple 06 12 34 56 78.</p>
+            <p class="err" id="a-tel-err"></p>
+          </div>
+          <div class="field">
+            <label for="a-creneau">Créneau souhaité</label>
+            <select id="a-creneau" name="creneau" aria-describedby="a-creneau-err">
+              <option value="">Choisir un créneau</option>
+              <option>Matin (9 h – 12 h)</option>
+              <option>Après-midi (13 h – 17 h)</option>
+              <option>Soir (17 h – 19 h)</option>
+            </select>
+            <p class="err" id="a-creneau-err"></p>
+          </div>
+          <div class="field">
+            <label for="a-msg">Votre demande <span class="opt">(facultatif)</span></label>
+            <textarea id="a-msg" name="message" rows="4" aria-describedby="a-msg-hint"></textarea>
+            <p class="hint" id="a-msg-hint">Par exemple : coupe et couleur, cheveux mi-longs.</p>
+          </div>
+          <p class="field" data-pin="8">
+            <label class="check-line"><input type="checkbox" id="a-news"> Recevoir la lettre du salon, une fois par mois <span class="opt">(facultatif)</span></label>
+          </p>
+          <button type="submit" class="btn-main" data-pin="9">Envoyer la demande</button>
+        </form>
+
+        <aside class="infos" aria-labelledby="titre-infos" data-pin="3">
+          <h2 id="titre-infos">Le salon</h2>
+          <dl>
+            <div><dt>Adresse</dt><dd>2 rue des Fossés, 75001 Paris</dd></div>
+            <div><dt>Téléphone</dt><dd><a href="tel:+33123456789">01 23 45 67 89</a></dd></div>
+            <div><dt>Horaires</dt><dd>Du mardi au samedi, 9 h – 19 h</dd></div>
+            <div><dt>Cookies</dt><dd>Aucun cookie publicitaire sur ce site.</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <aside class="cartel-erreurs" aria-labelledby="titre-corrections">
+        <h2 id="titre-corrections">Les dix corrections</h2>
+        <p>Les numéros reprennent ceux des erreurs de la version ratée.</p>
+        <ol>
+          <li>Quatre liens lisibles, la page active marquée.</li>
+          <li>La condition d’annulation est écrite en clair, en noir et en gras.</li>
+          <li>Pas de cookies publicitaires, donc pas de bannière, et le formulaire est accessible tout de suite.</li>
+          <li>Chaque champ a une étiquette visible au-dessus.</li>
+          <li>Le téléphone accepte espaces, points et tirets, avec un exemple. Il est facultatif.</li>
+          <li>Les champs facultatifs sont marqués, une phrase annonce la règle. Pas de longueur minimale cachée.</li>
+          <li>Les erreurs sont listées en haut avec des liens, et dites sous chaque champ. Rien n’est effacé.</li>
+          <li>L’inscription à la lettre est décochée, et dit ce qu’on recevra.</li>
+          <li>Un seul bouton, clair, qui dit ce qu’il fait. Pas de bouton « Effacer ».</li>
+          <li>Aucune pop-up : rien ne recouvre la page.</li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="salon-footer">
+    <div class="container">
+      <p>Coiffeur Antique · 2 rue des Fossés, 75001 Paris · Salon fictif, exposé au <a href="../index.html">musée Anti-UX</a>. Rien n’est envoyé.</p>
+    </div>
+  </footer>
+
+  <script src="coiffeur.js" type="module"></script>
+</body>
+</html>

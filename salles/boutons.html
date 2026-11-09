@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le bouton muet · Salle 01 · Anti-UX</title>
+  <meta name="description" content="Le bouton muet. Toute action doit produire un retour visible en moins de 100 ms, et un bouton d’envoi se désactive pendant le traitement.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/boutons.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Le bouton muet · Salle 01 · Anti-UX">
+  <meta property="og:description" content="Le bouton muet. Toute action doit produire un retour visible en moins de 100 ms, et un bouton d’envoi se désactive pendant le traitement.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/boutons.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le bouton muet · Salle 01 · Anti-UX">
+  <meta name="twitter:description" content="Le bouton muet. Toute action doit produire un retour visible en moins de 100 ms, et un bouton d’envoi se désactive pendant le traitement.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-a">Aile A · Gestes et boutons</a></li>
+          <li><span aria-current="page">Salle 01</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 01</span> <span>Aile A · Gestes et boutons</span></p>
+        <h1>Le bouton muet</h1>
+        <p class="lede">Un bouton qui ne dit rien : on reclique, la commande part trois fois.</p>
+        <p class="progress" id="progress-boutons" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-boutons" data-specimen="boutons" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-boutons" aria-labelledby="titre-mal-boutons">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-boutons">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Validez la commande. Cliquez autant de fois que nécessaire pour être sûr que ça a marché.</p>
+          <div class="specimen-content">
+            <button class="btn btn-primary" id="btn-mal-boutons" data-r="btn">Cliquez ici</button>
+            <p class="backstage">En coulisses : <strong data-r="count">0</strong> commande(s) créée(s)</p>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-boutons" aria-labelledby="titre-bien-boutons">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-boutons">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <button class="btn btn-primary" id="btn-bien-boutons" data-r="btn">Cliquez ici</button>
+            <p class="backstage">En coulisses : <strong data-r="count">0</strong> commande(s) créée(s)</p>
+          </div>
+          <div class="unlock-overlay" id="overlay-boutons">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-boutons">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-boutons" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 01</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Le bouton ne montre rien quand on clique : pas d’état de chargement, pas de confirmation. L’utilisateur doute, reclique, et la commande part deux ou trois fois.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Toute action doit produire un retour visible en moins de 100 ms, et un bouton d’envoi se désactive pendant le traitement.</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener">Nielsen #1 · Visibilité de l’état du système</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>&lt;button class=&quot;btn btn-primary&quot; onclick=&quot;envoyer()&quot;&gt;
+  Cliquez ici
+&lt;/button&gt;</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>&lt;button class=&quot;btn btn-primary disabled&quot; id=&quot;btn-bien-boutons&quot; data-r=&quot;btn&quot;&gt;Cliquez ici&lt;/button&gt;
+&lt;p class=&quot;backstage&quot;&gt;Commande envoyée&lt;/p&gt;
+&lt;script&gt;
+  envoi.addEventListener('click', async () =&gt; {
+    envoi.disabled = true;
+    envoi.textContent = 'Envoi…';
+    await envoyer();
+    envoi.textContent = '✓ Envoyé !';
+  });
+&lt;/script&gt;</code></pre>
+                <pre class="code-block"><code>.btn.btn-primary:disabled {
+  background: #38a169;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.btn.btn-primary::after {
+  content: '✓';
+  margin-left: 0.5rem;
+}</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <span></span>
+            <a class="pager-link next" href="haptique.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">02</span> Le clavier qui vibre</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

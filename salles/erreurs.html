@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le formulaire qui efface tout · Salle 09 · Anti-UX</title>
+  <meta name="description" content="Le formulaire qui efface tout. Un résumé avec des liens vers chaque champ, un message sous chaque champ qui dit comment corriger, et les valeurs saisies conservées.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/erreurs.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Le formulaire qui efface tout · Salle 09 · Anti-UX">
+  <meta property="og:description" content="Le formulaire qui efface tout. Un résumé avec des liens vers chaque champ, un message sous chaque champ qui dit comment corriger, et les valeurs saisies conservées.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/erreurs.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le formulaire qui efface tout · Salle 09 · Anti-UX">
+  <meta name="twitter:description" content="Le formulaire qui efface tout. Un résumé avec des liens vers chaque champ, un message sous chaque champ qui dit comment corriger, et les valeurs saisies conservées.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-b">Aile B · Saisie et formulaires</a></li>
+          <li><span aria-current="page">Salle 09</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 09</span> <span>Aile B · Saisie et formulaires</span></p>
+        <h1>Le formulaire qui efface tout</h1>
+        <p class="lede">Un message vague, et toutes les saisies effacées.</p>
+        <p class="progress" id="progress-erreurs" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-erreurs" data-specimen="erreurs" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-erreurs" aria-labelledby="titre-mal-erreurs">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-erreurs">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Envoyez le formulaire tel quel.</p>
+          <div class="specimen-content">
+            <form class="demo-form" data-r="form" novalidate>
+              <p class="error-banner" data-r="summary" role="alert" hidden></p>
+              <div class="field"><label for="er-m-email">Email</label><input type="text" id="er-m-email" value="marie@" data-r="email"></div>
+              <div class="field"><label for="er-m-pass">Mot de passe</label><input type="password" id="er-m-pass" value="abc" data-r="pass"></div>
+              <div class="field"><label for="er-m-cp">Code postal</label><input type="text" id="er-m-cp" value="7500" data-r="cp"></div>
+              <button type="submit" class="btn btn-primary">Créer mon compte</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-erreurs" aria-labelledby="titre-bien-erreurs">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-erreurs">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <form class="demo-form" data-r="form" novalidate>
+              <div class="error-summary" data-r="summary" role="alert" tabindex="-1" hidden></div>
+              <div class="field"><label for="er-b-email">Email</label><input type="email" id="er-b-email" value="marie@" data-r="email" aria-describedby="er-b-email-err"><p class="field-error" id="er-b-email-err"></p></div>
+              <div class="field"><label for="er-b-pass">Mot de passe</label><input type="password" id="er-b-pass" value="abc" data-r="pass" aria-describedby="er-b-pass-err"><p class="field-error" id="er-b-pass-err"></p></div>
+              <div class="field"><label for="er-b-cp">Code postal</label><input type="text" id="er-b-cp" value="7500" inputmode="numeric" data-r="cp" aria-describedby="er-b-cp-err"><p class="field-error" id="er-b-cp-err"></p></div>
+              <button type="submit" class="btn btn-primary">Créer mon compte</button>
+              <p class="form-success" data-r="ok" role="status"></p>
+            </form>
+          </div>
+          <div class="unlock-overlay" id="overlay-erreurs">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-erreurs">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-erreurs" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 09</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Après l’envoi, un compteur « 3 erreurs » s’affiche en haut. Aucun champ n’est signalé et le mot de passe a été vidé. Il faut deviner, puis tout ressaisir.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Un résumé avec des liens vers chaque champ, un message sous chaque champ qui dit comment corriger, et les valeurs saisies conservées.</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html" target="_blank" rel="noopener">WCAG 3.3.3 · Suggestion après une erreur</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>&lt;p class=&quot;error&quot;&gt;3 erreurs dans le formulaire.&lt;/p&gt;
+&lt;input type=&quot;password&quot; value=&quot;&quot;&gt; &lt;!-- vidé --&gt;</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>&lt;div role=&quot;alert&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;a href=&quot;#email&quot;&gt;Email : il manque le domaine&lt;/a&gt;
+&lt;/div&gt;
+&lt;input id=&quot;email&quot; aria-invalid=&quot;true&quot;
+  aria-describedby=&quot;email-err&quot;&gt;
+&lt;p id=&quot;email-err&quot;&gt;
+  Il manque le domaine après @ (ex. marie@exemple.fr)
+&lt;/p&gt;</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <a class="pager-link prev" href="formulaires.html" rel="prev">
+              <span class="pager-dir"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Salle précédente</span>
+              <span class="pager-title"><span class="inv">08</span> L’erreur vague</span>
+            </a>
+            <a class="pager-link next" href="validation-anticipe.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">10</span> Le validateur pressé</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

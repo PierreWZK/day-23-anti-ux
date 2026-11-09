@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coiffeur Antique, version sans UX · Pièce maîtresse · Anti-UX</title>
+  <meta name="description" content="La pièce maîtresse du musée Anti-UX : la page de contact d’un salon de coiffure qui cumule dix erreurs d’interface. À comparer avec la version réparée.">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/coiffeur/sans-ux.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coiffeur Antique, version sans UX · Anti-UX">
+  <meta property="og:description" content="Dix erreurs d’interface sur une seule page de contact. Saurez-vous prendre rendez-vous ?">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/coiffeur/sans-ux.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sans-ux">
+  <div class="musee-bar" role="region" aria-label="Musée Anti-UX">
+    <div class="container">
+      <p><strong>Pièce maîtresse · Version ratée.</strong> Cette page cumule dix erreurs. Essayez de prendre rendez-vous.</p>
+      <button type="button" id="toggle-pins" aria-pressed="false">Montrer les 10 erreurs</button>
+      <a href="avec-ux.html">Version réparée</a>
+      <a href="../index.html#piece-maitresse">Retour au musée</a>
+    </div>
+  </div>
+
+  <header class="salon-header">
+    <div class="container">
+      <a class="salon-logo" href="#contenu">Coiffeur <span>Antique</span></a>
+      <nav class="salon-nav" aria-label="Navigation du salon" data-pin="1">
+        <a href="#" data-404>Accueil</a>
+        <a href="#" data-404>Nos services</a>
+        <a href="#" data-404>Avis clients</a>
+        <a href="#" data-404>FAQ</a>
+        <a href="#" data-404>Contact</a>
+        <a href="#" data-404>Mentions légales</a>
+        <a href="#" data-404>Confidentialité</a>
+        <a href="#" data-404>Gestion des cookies</a>
+        <a href="#" data-404>Espace admin</a>
+        <a href="#" data-404>Newsletter</a>
+        <a href="#" data-404>Tarifs détaillés</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="salon-main">
+    <div class="container">
+      <section class="salon-hero">
+        <h1>Formulaire de contact Coiffeur Antique</h1>
+        <p data-pin="2">Nous vous répondons sous 24 h ouvrables. Pour une annulation, merci de prévenir 48 h avant, sinon le rendez-vous est facturé.</p>
+      </section>
+
+      <div class="cookie-wall" id="cookie-wall" data-pin="3">
+        <p><strong>Vous utilisez un bloqueur de publicité ?</strong> Acceptez les cookies publicitaires de nos 312 partenaires pour accéder au formulaire.</p>
+        <div class="row">
+          <button type="button" class="btn-accept" id="cookies-ok">Tout accepter</button>
+          <button type="button" class="link-refus" id="cookies-refus">continuer sans accepter</button>
+        </div>
+      </div>
+
+      <form class="form form-bloque" id="form-sans" novalidate>
+        <p class="erreur-vague" id="erreur-vague" role="alert" hidden data-pin="7">Erreur.</p>
+
+        <div data-pin="4">
+          <label for="s-nom">Nom</label>
+          <input id="s-nom" name="nom" placeholder="Nom et prénom">
+        </div>
+        <div>
+          <label for="s-mail">Email</label>
+          <input id="s-mail" name="email" placeholder="Email professionnel">
+        </div>
+        <div data-pin="5">
+          <label for="s-tel">Téléphone</label>
+          <input id="s-tel" name="tel" placeholder="Téléphone">
+        </div>
+        <div data-pin="6">
+          <label for="s-msg">Message</label>
+          <textarea id="s-msg" name="message" rows="6" placeholder="Votre message"></textarea>
+        </div>
+        <div>
+          <label for="s-creneau">Créneau</label>
+          <select id="s-creneau" name="creneau">
+            <option value="">Créneau souhaité</option>
+            <option>Matin</option>
+            <option>Après-midi</option>
+            <option>Soir</option>
+          </select>
+        </div>
+        <p class="newsletter-check" data-pin="8">
+          <input type="checkbox" id="s-news" checked>
+          <label for="s-news">J’accepte de recevoir les offres du salon et de ses partenaires</label>
+        </p>
+        <div class="form-actions" data-pin="9">
+          <button type="reset" class="btn-effacer">Effacer</button>
+          <button type="submit" class="btn-envoyer-pale">Envoyer</button>
+        </div>
+      </form>
+
+      <aside class="cartel-erreurs" aria-labelledby="titre-erreurs">
+        <h2 id="titre-erreurs">Les dix erreurs de cette page</h2>
+        <p>Chaque numéro correspond à une pastille, visible avec « Montrer les 10 erreurs ». Le lien mène à la salle du musée qui l’explique.</p>
+        <ol>
+          <li>Onze liens en petit dans l’en-tête, dont aucun ne fonctionne. <a href="../salles/priorite.html">Salle 20, Les douze boutons</a></li>
+          <li>Une condition importante (annulation facturée) en gris pâle et en petit. <a href="../salles/lisibilite.html">Salle 30, Le gris sur gris</a></li>
+          <li>Un mur de cookies : le formulaire reste bloqué tant qu’on n’accepte pas, le refus est minuscule. <a href="../salles/pieges.html">Salle 34, La bannière de cookies piégée</a></li>
+          <li>Les intitulés sont dans les champs et disparaissent dès qu’on tape. <a href="../salles/textes.html">Salle 07, Le texte d’exemple qui sert d’étiquette</a></li>
+          <li>Le téléphone est refusé s’il contient des espaces, sans dire le format attendu. <a href="../salles/validation-anticipe.html">Salle 10, Le validateur pressé</a></li>
+          <li>Le message doit faire 50 caractères, mais rien ne le dit. Tous les champs sont obligatoires, sans le signaler. <a href="../salles/formulaires.html">Salle 08, L’erreur vague</a></li>
+          <li>À l’envoi, un seul mot : « Erreur. ». Et tout le formulaire est vidé. <a href="../salles/erreurs.html">Salle 09, Le formulaire qui efface tout</a></li>
+          <li>L’inscription aux offres des partenaires est précochée, en tout petit. <a href="../salles/cookies.html">Salle 35, Les cookies déjà posés</a></li>
+          <li>« Effacer » en rouge vif, collé à un « Envoyer » qui a l’air désactivé. <a href="../salles/boutons.html">Salle 01, Le bouton muet</a></li>
+          <li>Une pop-up de newsletter recouvre la page, avec une croix de 12 pixels. <a href="../salles/lecture-seule.html">Salle 21, L’article envahi</a></li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+
+  <div class="popup-news" id="popup-news" role="dialog" aria-label="Newsletter" hidden data-pin="10">
+    <button type="button" class="close-mini" id="popup-close" aria-label="Fermer">×</button>
+    <h2>Attendez ! Ne partez pas !</h2>
+    <p>Inscrivez-vous à notre newsletter et recevez −5 % sur votre prochain brushing.</p>
+  </div>
+
+  <footer class="salon-footer">
+    <div class="container">
+      <p>Coiffeur Antique · 2 rue des Fossés, 75001 Paris · Salon fictif, exposé au <a href="../index.html">musée Anti-UX</a>. Rien n’est envoyé.</p>
+    </div>
+  </footer>
+
+  <script src="coiffeur.js" type="module"></script>
+</body>
+</html>

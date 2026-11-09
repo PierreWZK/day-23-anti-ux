@@ -1,0 +1,13 @@
+.git
+.impeccable
+node_modules
+docs
+scripts
+tests
+*.md
+*.ts
+package.json
+package-lock.json
+Dockerfile
+.dockerignore
+src

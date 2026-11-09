@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L’écrasement silencieux · Salle 27 · Anti-UX</title>
+  <meta name="description" content="L’écrasement silencieux. Montrer la présence avant l’édition : qui est là, sur quelle partie. Proposer d’attendre, de suggérer, ou de travailler ailleurs.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/statut-multi.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="L’écrasement silencieux · Salle 27 · Anti-UX">
+  <meta property="og:description" content="L’écrasement silencieux. Montrer la présence avant l’édition : qui est là, sur quelle partie. Proposer d’attendre, de suggérer, ou de travailler ailleurs.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/statut-multi.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="L’écrasement silencieux · Salle 27 · Anti-UX">
+  <meta name="twitter:description" content="L’écrasement silencieux. Montrer la présence avant l’édition : qui est là, sur quelle partie. Proposer d’attendre, de suggérer, ou de travailler ailleurs.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-d">Aile D · Retours et états</a></li>
+          <li><span aria-current="page">Salle 27</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 27</span> <span>Aile D · Retours et états</span></p>
+        <h1>L’écrasement silencieux</h1>
+        <p class="lede">Un conflit découvert après l’enregistrement.</p>
+        <p class="progress" id="progress-statut-multi" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-statut-multi" data-specimen="statut-multi" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-statut-multi" aria-labelledby="titre-mal-statut-multi">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-statut-multi">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Modifiez le budget et enregistrez.</p>
+          <div class="specimen-content">
+            <div class="doc">
+              <label for="sm-m-budget">Budget 2027</label>
+              <textarea id="sm-m-budget" rows="2" data-r="text">12 000 € pour la communication.</textarea>
+              <button type="button" class="btn btn-primary btn-sm" data-r="save">Enregistrer</button>
+              <p class="backstage" data-r="log" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-statut-multi" aria-labelledby="titre-bien-statut-multi">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-statut-multi">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <div class="doc">
+              <p class="presence" data-r="presence"><span class="avatar" aria-hidden="true">C</span> Camille modifie ce paragraphe</p>
+              <label for="sm-b-budget">Budget 2027</label>
+              <textarea id="sm-b-budget" rows="2" data-r="text" readonly aria-describedby="sm-b-lock">12 000 € pour la communication.</textarea>
+              <p class="hint" id="sm-b-lock" data-r="lock">Verrouillé pendant que Camille écrit.</p>
+              <button type="button" class="btn btn-muet btn-sm" data-r="notify">Me prévenir quand c’est libre</button>
+              <p class="backstage" data-r="log" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="unlock-overlay" id="overlay-statut-multi">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-statut-multi">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-statut-multi" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 27</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Deux personnes modifient le même paragraphe sans le savoir. À l’enregistrement, la dernière version écrase l’autre, et on l’apprend après coup.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Montrer la présence avant l’édition : qui est là, sur quelle partie. Proposer d’attendre, de suggérer, ou de travailler ailleurs.</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://www.nngroup.com/articles/visibility-system-status/" target="_blank" rel="noopener">NN/g · Visibility of system status</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>enregistrer.onclick = () =&gt;
+  api.put('/doc/budget', texte.value); // écrase sans prévenir</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>socket.on('presence', ({ nom, section }) =&gt; {
+  afficherPresence(nom, section);
+  if (section === 'budget') {
+    texte.readOnly = true;
+    verrou.textContent = nom + ' modifie ce paragraphe';
+  }
+});</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <a class="pager-link prev" href="sauvegarde.html" rel="prev">
+              <span class="pager-dir"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Salle précédente</span>
+              <span class="pager-title"><span class="inv">26</span> La sauvegarde qui bloque</span>
+            </a>
+            <a class="pager-link next" href="session.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">28</span> La session expirée</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

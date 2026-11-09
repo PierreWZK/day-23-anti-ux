@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "coiffeur/sans-ux.html"
+        ],
+        "createdAt": "2026-11-06T17:51:56.301Z",
+        "reason": "Claude: page volontairement ratée (pièce maîtresse Anti-UX), le faible contraste est l'erreur n°2 exposée"
+      }
+    ]
+  }
+}

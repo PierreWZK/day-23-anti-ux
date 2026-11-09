@@ -1,0 +1,520 @@
+[
+  {
+    "slug": "boutons",
+    "path": "salles/boutons.html",
+    "title": "Le bouton muet",
+    "num": "01",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"btn\"]"
+      ],
+      [
+        "click",
+        "[data-r=\"btn\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "haptique",
+    "path": "salles/haptique.html",
+    "title": "Le clavier qui vibre",
+    "num": "02",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"key\"] >> nth=0"
+      ],
+      [
+        "click",
+        "[data-r=\"key\"] >> nth=1"
+      ],
+      [
+        "click",
+        "[data-r=\"key\"] >> nth=2"
+      ],
+      [
+        "click",
+        "[data-r=\"key\"] >> nth=3"
+      ]
+    ]
+  },
+  {
+    "slug": "favoris",
+    "path": "salles/favoris.html",
+    "title": "Le favori en trois étapes",
+    "num": "03",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"open\"]"
+      ],
+      [
+        "click",
+        "[data-r=\"next\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "notation",
+    "path": "salles/notation.html",
+    "title": "La note sous condition",
+    "num": "04",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"star\"] >> nth=3"
+      ]
+    ]
+  },
+  {
+    "slug": "zoom",
+    "path": "salles/zoom.html",
+    "title": "Le zoom sans frein",
+    "num": "05",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"plus\"]"
+      ],
+      [
+        "click",
+        "[data-r=\"plus\"]"
+      ],
+      [
+        "click",
+        "[data-r=\"plus\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "suppression",
+    "path": "salles/suppression.html",
+    "title": "La corbeille piégée",
+    "num": "06",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"del\"] >> nth=0"
+      ]
+    ]
+  },
+  {
+    "slug": "textes",
+    "path": "salles/textes.html",
+    "title": "Le texte d’exemple qui sert d’étiquette",
+    "num": "07",
+    "steps": [
+      [
+        "fill",
+        "[data-r=\"f2\"]",
+        "14/07"
+      ]
+    ]
+  },
+  {
+    "slug": "formulaires",
+    "path": "salles/formulaires.html",
+    "title": "L’erreur vague",
+    "num": "08",
+    "steps": [
+      [
+        "click",
+        "button[type=\"submit\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "erreurs",
+    "path": "salles/erreurs.html",
+    "title": "Le formulaire qui efface tout",
+    "num": "09",
+    "steps": [
+      [
+        "click",
+        "button[type=\"submit\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "validation-anticipe",
+    "path": "salles/validation-anticipe.html",
+    "title": "Le validateur pressé",
+    "num": "10",
+    "steps": [
+      [
+        "type",
+        "[data-r=\"email\"]",
+        "ma"
+      ]
+    ]
+  },
+  {
+    "slug": "validation-personnalisee",
+    "path": "salles/validation-personnalisee.html",
+    "title": "Le code en six cases",
+    "num": "11",
+    "steps": [
+      [
+        "type",
+        "[data-r=\"box\"] >> nth=0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "slug": "cache-saisi",
+    "path": "salles/cache-saisi.html",
+    "title": "Le brouillon perdu",
+    "num": "12",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"refresh\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "aide-inline",
+    "path": "salles/aide-inline.html",
+    "title": "L’aide qui fait quitter la page",
+    "num": "13",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"help\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "resume-commande",
+    "path": "salles/resume-commande.html",
+    "title": "Les frais surprises",
+    "num": "14",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"pay\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "navigation",
+    "path": "salles/navigation.html",
+    "title": "Le menu qui se ferme tout seul",
+    "num": "15",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"toggle\"]"
+      ],
+      [
+        "wait",
+        1400
+      ]
+    ]
+  },
+  {
+    "slug": "navigation-contextuelle",
+    "path": "salles/navigation-contextuelle.html",
+    "title": "La barre d’outils figée",
+    "num": "16",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"act\"] >> nth=0"
+      ]
+    ]
+  },
+  {
+    "slug": "historique-nav",
+    "path": "salles/historique-nav.html",
+    "title": "Le retour qui efface",
+    "num": "17",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"next\"]"
+      ],
+      [
+        "click",
+        "[data-r=\"back\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "distillation",
+    "path": "salles/distillation.html",
+    "title": "La liste interminable",
+    "num": "18",
+    "steps": [
+      [
+        "select",
+        "[data-r=\"select\"]",
+        "Lyon"
+      ]
+    ]
+  },
+  {
+    "slug": "recherche-autocomplet",
+    "path": "salles/recherche-autocomplet.html",
+    "title": "L’autocomplétion sponsorisée",
+    "num": "19",
+    "steps": [
+      [
+        "type",
+        "[data-r=\"q\"]",
+        "cas"
+      ]
+    ]
+  },
+  {
+    "slug": "priorite",
+    "path": "salles/priorite.html",
+    "title": "Les douze boutons",
+    "num": "20",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"b\"] >> nth=0"
+      ],
+      [
+        "click",
+        "[data-r=\"b\"] >> nth=1"
+      ],
+      [
+        "click",
+        "[data-r=\"b\"] >> nth=2"
+      ]
+    ]
+  },
+  {
+    "slug": "lecture-seule",
+    "path": "salles/lecture-seule.html",
+    "title": "L’article envahi",
+    "num": "21",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"close\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "retours",
+    "path": "salles/retours.html",
+    "title": "Le sablier éternel",
+    "num": "22",
+    "steps": [
+      [
+        "wait",
+        3300
+      ]
+    ]
+  },
+  {
+    "slug": "chargement",
+    "path": "salles/chargement.html",
+    "title": "Le chargement aveugle",
+    "num": "23",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"go\"]"
+      ],
+      [
+        "wait",
+        3300
+      ]
+    ]
+  },
+  {
+    "slug": "progression",
+    "path": "salles/progression.html",
+    "title": "La barre de progression muette",
+    "num": "24",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"listen\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "activite",
+    "path": "salles/activite.html",
+    "title": "L’écran figé",
+    "num": "25",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"go\"]"
+      ],
+      [
+        "wait",
+        4300
+      ]
+    ]
+  },
+  {
+    "slug": "sauvegarde",
+    "path": "salles/sauvegarde.html",
+    "title": "La sauvegarde qui bloque",
+    "num": "26",
+    "steps": [
+      [
+        "type",
+        "[data-r=\"text\"]",
+        "Bonjour"
+      ],
+      [
+        "wait",
+        1300
+      ]
+    ]
+  },
+  {
+    "slug": "statut-multi",
+    "path": "salles/statut-multi.html",
+    "title": "L’écrasement silencieux",
+    "num": "27",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"save\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "session",
+    "path": "salles/session.html",
+    "title": "La session expirée",
+    "num": "28",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"pause\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "reexperience",
+    "path": "salles/reexperience.html",
+    "title": "Le paiement à refaire",
+    "num": "29",
+    "steps": [
+      [
+        "click",
+        "button[type=\"submit\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "lisibilite",
+    "path": "salles/lisibilite.html",
+    "title": "Le gris sur gris",
+    "num": "30",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"answer\"] >> nth=0"
+      ]
+    ]
+  },
+  {
+    "slug": "nouveaute",
+    "path": "salles/nouveaute.html",
+    "title": "Le badge « Nouveau ! » partout",
+    "num": "31",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"close\"]"
+      ],
+      [
+        "wait",
+        1200
+      ],
+      [
+        "click",
+        "[data-r=\"close\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "priorite-notif",
+    "path": "salles/priorite-notif.html",
+    "title": "Tout en rouge",
+    "num": "32",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"n\"] >> nth=0"
+      ],
+      [
+        "click",
+        "[data-r=\"n\"] >> nth=1"
+      ]
+    ]
+  },
+  {
+    "slug": "rappel",
+    "path": "salles/rappel.html",
+    "title": "Les rappels imposés",
+    "num": "33",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"day\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "pieges",
+    "path": "salles/pieges.html",
+    "title": "La bannière de cookies piégée",
+    "num": "34",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"settings\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "cookies",
+    "path": "salles/cookies.html",
+    "title": "Les cookies déjà posés",
+    "num": "35",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"ok\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "securite",
+    "path": "salles/securite.html",
+    "title": "Le paiement sans repère",
+    "num": "36",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"pay\"]"
+      ]
+    ]
+  },
+  {
+    "slug": "export",
+    "path": "salles/export.html",
+    "title": "L’export par courrier",
+    "num": "37",
+    "steps": [
+      [
+        "click",
+        "[data-r=\"go\"]"
+      ]
+    ]
+  }
+]

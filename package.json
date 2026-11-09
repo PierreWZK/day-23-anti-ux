@@ -1,0 +1,26 @@
+{
+  "name": "anti-ux",
+  "version": "1.0.0",
+  "description": "Anti-UX, le musée des erreurs d'interface",
+  "scripts": {
+    "dev": "npx serve . -l 3023",
+    "build": "node scripts/build/build.mjs",
+    "test": "node scripts/build/build.mjs && npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
+    "build-og": "cd .. && python scripts/og/build-og.py day-23-anti-ux"
+  },
+  "keywords": [
+    "ux",
+    "accessibility",
+    "design",
+    "museum",
+    "antipattern"
+  ],
+  "author": "Pierre WZK",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "playwright": "^1.47.0",
+    "serve": "^14.2.0"
+  }
+}

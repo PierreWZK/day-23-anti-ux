@@ -1,0 +1,50 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "createdAt": "2026-11-06T14:49:08.180Z",
+        "reason": "Claude: Arial volontaire dans l'œuvre du hero, qui imite un vieux site raté"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-11-06T14:49:08.403Z",
+        "reason": "Claude: .tip est un composant des vitrines, imitation d'interface web générique"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "coiffeur/sans-ux.html"
+        ],
+        "createdAt": "2026-11-06T18:02:24.058Z",
+        "reason": "Claude: lien de refus minuscule = erreur n°3 exposée volontairement dans la page ratée"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "coiffeur/sans-ux.html"
+        ],
+        "createdAt": "2026-11-06T18:02:34.910Z",
+        "reason": "user confirmed: direction Vrai musée, murs blanc cassé (choix de l'utilisateur, 2026-11-06)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "coiffeur/avec-ux.html"
+        ],
+        "createdAt": "2026-11-06T18:02:35.142Z",
+        "reason": "user confirmed: direction Vrai musée, murs blanc cassé (choix de l'utilisateur, 2026-11-06)"
+      }
+    ]
+  }
+}

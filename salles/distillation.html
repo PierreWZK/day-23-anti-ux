@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La liste interminable · Salle 18 · Anti-UX</title>
+  <meta name="description" content="La liste interminable. Au-delà d’une quinzaine d’options, proposer un champ de recherche qui filtre pendant la frappe.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/distillation.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="La liste interminable · Salle 18 · Anti-UX">
+  <meta property="og:description" content="La liste interminable. Au-delà d’une quinzaine d’options, proposer un champ de recherche qui filtre pendant la frappe.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/distillation.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La liste interminable · Salle 18 · Anti-UX">
+  <meta name="twitter:description" content="La liste interminable. Au-delà d’une quinzaine d’options, proposer un champ de recherche qui filtre pendant la frappe.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-c">Aile C · Navigation et repères</a></li>
+          <li><span aria-current="page">Salle 18</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 18</span> <span>Aile C · Navigation et repères</span></p>
+        <h1>La liste interminable</h1>
+        <p class="lede">Une liste de 60 villes, sans recherche.</p>
+        <p class="progress" id="progress-distillation" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-distillation" data-specimen="distillation" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-distillation" aria-labelledby="titre-mal-distillation">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-distillation">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Choisissez « Lyon » comme ville de livraison.</p>
+          <div class="specimen-content">
+            <div class="field">
+              <label for="ds-m-ville">Ville de livraison</label>
+              <select id="ds-m-ville" data-r="select">
+                <option value="">— Choisir —</option>
+                <option>Strasbourg</option>
+                <option>Brest</option>
+                <option>Aix-en-Provence</option>
+                <option>Lille</option>
+                <option>Ajaccio</option>
+                <option>Nantes</option>
+                <option>Dijon</option>
+                <option>Pau</option>
+                <option>Lyon</option>
+                <option>Rennes</option>
+                <option>Amiens</option>
+                <option>Toulon</option>
+                <option>Metz</option>
+                <option>Bayonne</option>
+                <option>Grenoble</option>
+                <option>Caen</option>
+                <option>Nîmes</option>
+                <option>Annecy</option>
+                <option>Limoges</option>
+                <option>Perpignan</option>
+                <option>Reims</option>
+                <option>Tours</option>
+                <option>Le Havre</option>
+                <option>Besançon</option>
+                <option>Orléans</option>
+                <option>Rouen</option>
+                <option>Mulhouse</option>
+                <option>Clermont-Ferrand</option>
+                <option>Brive</option>
+                <option>Nancy</option>
+                <option>Avignon</option>
+                <option>Poitiers</option>
+                <option>La Rochelle</option>
+                <option>Angers</option>
+                <option>Saint-Malo</option>
+                <option>Lorient</option>
+                <option>Quimper</option>
+                <option>Vannes</option>
+                <option>Calais</option>
+                <option>Dunkerque</option>
+                <option>Arras</option>
+                <option>Troyes</option>
+                <option>Chartres</option>
+                <option>Bourges</option>
+                <option>Valence</option>
+                <option>Chambéry</option>
+                <option>Gap</option>
+                <option>Niort</option>
+                <option>Albi</option>
+                <option>Rodez</option>
+                <option>Montpellier</option>
+                <option>Toulouse</option>
+                <option>Bordeaux</option>
+                <option>Marseille</option>
+                <option>Nice</option>
+                <option>Paris</option>
+                <option>Cannes</option>
+                <option>Biarritz</option>
+                <option>Colmar</option>
+                <option>Vichy</option>
+              </select>
+            </div>
+            <p class="backstage" data-r="log" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-distillation" aria-labelledby="titre-bien-distillation">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-distillation">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <div class="field">
+              <label for="ds-b-ville">Ville de livraison</label>
+              <input type="search" id="ds-b-ville" data-r="search" autocomplete="off" aria-describedby="ds-b-count" placeholder="Ex. Lyon">
+              <p class="hint" id="ds-b-count" data-r="count" aria-live="polite">Tapez les premières lettres</p>
+              <ul class="filter-list" data-r="list"></ul>
+            </div>
+            <p class="backstage" data-r="log" aria-live="polite"></p>
+          </div>
+          <div class="unlock-overlay" id="overlay-distillation">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-distillation">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-distillation" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 18</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Une liste déroulante de 60 villes, sans ordre et sans recherche. Plus il y a d’options, plus le temps de décision s’allonge. Sur mobile, la liste occupe tout l’écran.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Au-delà d’une quinzaine d’options, proposer un champ de recherche qui filtre pendant la frappe.</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://lawsofux.com/hicks-law/" target="_blank" rel="noopener">Loi de Hick · Lois de l’UX</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>&lt;select&gt;
+  &lt;option&gt;Strasbourg&lt;/option&gt;
+  &lt;option&gt;Brest&lt;/option&gt;
+  &lt;!-- … 58 autres, sans ordre --&gt;
+&lt;/select&gt;</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>&lt;input type=&quot;search&quot; id=&quot;ville&quot;&gt;
+&lt;ul id=&quot;resultats&quot;&gt;&lt;/ul&gt;
+&lt;script&gt;
+  ville.addEventListener('input', () =&gt; {
+    const q = ville.value.toLowerCase();
+    afficher(VILLES.filter(v =&gt;
+      v.toLowerCase().startsWith(q)).slice(0, 8));
+  });
+&lt;/script&gt;</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <a class="pager-link prev" href="historique-nav.html" rel="prev">
+              <span class="pager-dir"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Salle précédente</span>
+              <span class="pager-title"><span class="inv">17</span> Le retour qui efface</span>
+            </a>
+            <a class="pager-link next" href="recherche-autocomplet.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">19</span> L’autocomplétion sponsorisée</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

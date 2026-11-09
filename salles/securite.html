@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le paiement sans repère · Salle 36 · Anti-UX</title>
+  <meta name="description" content="Le paiement sans repère. Une connexion https, et près du champ de carte une phrase claire : qui traite le paiement, ce qui est conservé et ce qui ne l’est pas.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/salles/securite.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Le paiement sans repère · Salle 36 · Anti-UX">
+  <meta property="og:description" content="Le paiement sans repère. Une connexion https, et près du champ de carte une phrase claire : qui traite le paiement, ce qui est conservé et ce qui ne l’est pas.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/salles/securite.html">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le paiement sans repère · Salle 36 · Anti-UX">
+  <meta name="twitter:description" content="Le paiement sans repère. Une connexion https, et près du champ de carte une phrase claire : qui traite le paiement, ce qui est conservé et ce qui ne l’est pas.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page-salle">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="../index.html#plan">Plan</a>
+        <a href="../index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="../index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <article class="container salle">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <ol>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../index.html#aile-f">Aile F · Confiance et pièges</a></li>
+          <li><span aria-current="page">Salle 36</span></li>
+        </ol>
+      </nav>
+
+      <header class="salle-head">
+        <p class="kicker"><span class="inv">Salle 36</span> <span>Aile F · Confiance et pièges</span></p>
+        <h1>Le paiement sans repère</h1>
+        <p class="lede">Aucune indication sur qui traite votre carte.</p>
+        <p class="progress" id="progress-securite" data-total="37">0 salle visitée sur 37</p>
+      </header>
+
+      <div class="vitrines specimen-container" id="specimen-securite" data-specimen="securite" data-group="salle">
+        <section class="vitrine specimen-col bad" id="col-mal-securite" aria-labelledby="titre-mal-securite">
+          <header class="vitrine-label">
+            <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Le piège</span>
+            <h2 id="titre-mal-securite">Version ratée</h2>
+          </header>
+          <p class="task"><strong>À vous :</strong> Saisissez votre carte et payez. (Faux formulaire, rien n’est envoyé.)</p>
+          <div class="specimen-content">
+            <div class="browser">
+              <p class="browser-bar insecure">⚠ Non sécurisé · http://paiement-boutique.biz</p>
+              <div class="demo-form pay-raw">
+                <label for="sc-m-cb">CARTE</label>
+                <input type="text" id="sc-m-cb" inputmode="numeric" value="4242 4242 4242 4242">
+                <button type="button" class="btn btn-gris" data-r="pay">OK</button>
+              </div>
+              <p class="backstage" data-r="log" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="vitrine specimen-col good blurred" id="col-bien-securite" aria-labelledby="titre-bien-securite">
+          <header class="vitrine-label">
+            <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Réparé</span>
+            <h2 id="titre-bien-securite">Version corrigée</h2>
+          </header>
+          <div class="specimen-content">
+            <div class="browser">
+              <p class="browser-bar secure">🔒 https://boutique.fr/paiement</p>
+              <div class="demo-form">
+                <label for="sc-b-cb">Numéro de carte</label>
+                <input type="text" id="sc-b-cb" inputmode="numeric" autocomplete="cc-number" value="4242 4242 4242 4242" aria-describedby="sc-b-info">
+                <p class="hint" id="sc-b-info">🔒 Paiement chiffré, traité par notre prestataire bancaire. Votre numéro n’est jamais stocké chez nous.</p>
+                <button type="button" class="btn btn-primary" data-r="pay">Payer 61,70 €</button>
+              </div>
+              <p class="backstage" data-r="log" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="unlock-overlay" id="overlay-securite">
+            <div class="unlock-content">
+              <p class="unlock-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Vitrine fermée</p>
+              <p class="unlock-hint">Subissez d’abord le piège : elle s’ouvre toute seule.</p>
+              <button type="button" class="btn-reveal" id="reveal-btn-securite">Ouvrir quand même</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="unlock-status" id="status-securite" role="status"></p>
+
+      <aside class="cartel" aria-label="Cartel de la salle">
+        <p class="cartel-num">N° 36</p>
+        <dl>
+          <div>
+            <dt>Pourquoi ça ne va pas</dt>
+            <dd>Le formulaire de carte bancaire arrive sans aucun repère : pas d’explication sur la protection, adresse en http, style différent du reste du site. On hésite à saisir sa carte, à raison.</dd>
+          </div>
+          <div class="cartel-rule">
+            <dt>La règle à retenir</dt>
+            <dd>Une connexion https, et près du champ de carte une phrase claire : qui traite le paiement, ce qui est conservé et ce qui ne l’est pas.</dd>
+          </div>
+          <div>
+            <dt>Référence</dt>
+            <dd><a href="https://baymard.com/blog/perceived-security-of-payment-form" target="_blank" rel="noopener">Baymard · Perceived security in checkout</a></dd>
+          </div>
+        </dl>
+      </aside>
+
+      <details class="code-section">
+        <summary>Voir le code, avant et après</summary>
+        <div class="code-comparison">
+              <div class="code-item">
+                <h3>Version ratée</h3>
+                <pre class="code-block"><code>&lt;form action=&quot;http://paiement-boutique.biz&quot;&gt;
+  &lt;input name=&quot;carte&quot;&gt; &lt;button&gt;OK&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+              <div class="code-item">
+                <h3>Version corrigée</h3>
+                <pre class="code-block"><code>&lt;form action=&quot;https://boutique.fr/paiement&quot;&gt;
+  &lt;label for=&quot;cb&quot;&gt;Numéro de carte&lt;/label&gt;
+  &lt;input id=&quot;cb&quot; autocomplete=&quot;cc-number&quot;
+    aria-describedby=&quot;info-cb&quot;&gt;
+  &lt;p id=&quot;info-cb&quot;&gt;🔒 Paiement chiffré, numéro jamais stocké.&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+        </div>
+      </details>
+
+      <nav class="pager" aria-label="Salles voisines">
+            <a class="pager-link prev" href="cookies.html" rel="prev">
+              <span class="pager-dir"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Salle précédente</span>
+              <span class="pager-title"><span class="inv">35</span> Les cookies déjà posés</span>
+            </a>
+            <a class="pager-link next" href="export.html" rel="next">
+              <span class="pager-dir">Salle suivante <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="pager-title"><span class="inv">37</span> L’export par courrier</span>
+            </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/specimen.js" type="module"></script>
+</body>
+</html>

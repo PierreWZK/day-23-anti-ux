@@ -1,0 +1,237 @@
+/* Coiffeur Antique · la pièce maîtresse du musée Anti-UX.
+ * Deux versions d'un même site : .sans-ux (erreurs volontaires) et .avec-ux (corrigée).
+ * La barre du musée, en haut, appartient au musée : elle reste accessible dans les deux versions.
+ */
+
+:root {
+  --vert-salon: #1f3b2f;
+  --laiton: #b08840;
+  --creme: #f7f2e8;
+  --texte: #1c1d1a;
+  --texte-2: #545750;   /* 7:1 sur crème */
+  --bord: #cfc6b4;
+  --rouge: #b42318;
+  --ok: #1e6b3c;
+  --musee: #1b1712;
+  --vermillon: #b8361a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--creme);
+}
+
+h1, h2, h3 { margin: 0; line-height: 1.15; }
+p { margin: 0; }
+
+:focus-visible { outline: 3px solid var(--laiton); outline-offset: 3px; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.container { width: 100%; max-width: 64rem; margin-inline: auto; padding-inline: 1.25rem; }
+
+/* ---------- Barre du musée ---------- */
+.musee-bar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--musee);
+  color: #f4efe6;
+  font-size: 0.85rem;
+}
+.musee-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  padding-block: 0.6rem;
+}
+.musee-bar p { flex: 1 1 14rem; }
+.musee-bar strong { color: #f0a58f; font-weight: 600; }
+.musee-bar a, .musee-bar button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 0.7rem;
+  color: #f4efe6;
+  background: transparent;
+  border: 1px solid rgba(244, 239, 230, 0.35);
+  border-radius: 2px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.musee-bar a:hover, .musee-bar button:hover { background: #f4efe6; color: var(--musee); }
+.musee-bar button[aria-pressed="true"] { background: var(--vermillon); border-color: var(--vermillon); color: #fff; }
+.musee-bar :focus-visible { outline-color: #f0a58f; }
+
+/* Pastilles numérotées des erreurs / corrections */
+[data-pin] { position: relative; }
+.show-pins [data-pin]::after {
+  content: attr(data-pin);
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--vermillon);
+  color: #fff;
+  font: 700 0.8rem/1 'Inter', sans-serif;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff;
+}
+.avec-ux.show-pins [data-pin]::after { background: var(--ok); }
+.show-pins [data-pin] { outline: 2px dashed var(--vermillon); outline-offset: 2px; }
+.avec-ux.show-pins [data-pin] { outline-color: var(--ok); }
+
+.cartel-erreurs {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #fffdf9;
+  border: 1px solid var(--bord);
+  font-size: 0.95rem;
+}
+.cartel-erreurs h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.4rem; }
+.cartel-erreurs > p { margin-top: 0.4rem; color: var(--texte-2); }
+.cartel-erreurs ol { margin: 1rem 0 0; padding-left: 1.4rem; display: grid; gap: 0.5rem; }
+.cartel-erreurs a { color: var(--vermillon); }
+
+/* ---------- Site du salon : commun ---------- */
+.salon-header { background: var(--vert-salon); color: var(--creme); }
+.salon-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; flex-wrap: wrap; }
+.salon-logo { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; font-weight: 700; color: var(--creme); text-decoration: none; }
+.salon-logo span { color: var(--laiton); }
+.salon-nav { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.salon-nav a { color: var(--creme); text-decoration: none; }
+
+.salon-hero { padding: 2.5rem 0 1.5rem; }
+.salon-hero h1 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(2rem, 6vw, 2.8rem); }
+.salon-hero p { margin-top: 0.6rem; color: var(--texte-2); }
+
+.salon-main { padding-bottom: 3rem; }
+.salon-grid { display: grid; gap: 2rem; }
+
+.salon-footer { padding: 2rem 0; background: var(--vert-salon); color: #d8d2c4; font-size: 0.875rem; }
+.salon-footer a { color: #f1d7a1; }
+
+.form { display: grid; gap: 1.1rem; }
+.form input, .form textarea, .form select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.8rem;
+  font: inherit;
+  color: var(--texte);
+  background: #fff;
+  border: 1px solid #8a8f86;
+  border-radius: 6px;
+}
+.form textarea { resize: vertical; }
+
+.toast-404 {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 80;
+  padding: 0.7rem 1rem;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Version sans UX : erreurs volontaires ---------- */
+.sans-ux .salon-nav a { padding: 0.15rem 0.3rem; font-size: 0.72rem; }
+.sans-ux .salon-hero p { color: #b5b0a5; font-size: 0.8rem; }   /* gris pâle volontaire */
+
+.cookie-wall {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: #fff3cd;
+  border: 2px solid #e0b100;
+  font-size: 0.9rem;
+}
+.cookie-wall .row { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.btn-accept { min-height: 48px; padding: 0 2rem; background: var(--ok); color: #fff; border: 0; border-radius: 4px; font: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; }
+.link-refus { background: none; border: 0; padding: 0; font-size: 0.65rem; color: #b9b3a3; cursor: pointer; }
+
+.form-bloque { opacity: 0.4; pointer-events: none; filter: grayscale(1); }
+
+.sans-ux .form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sans-ux .form input::placeholder, .sans-ux .form textarea::placeholder { color: #b8b8b8; }
+.sans-ux .newsletter-check { display: flex; gap: 0.4rem; align-items: center; font-size: 0.7rem; color: #a8a49a; }
+.sans-ux .newsletter-check label { position: static; width: auto; height: auto; clip: auto; }
+
+.sans-ux .form-actions { display: flex; gap: 0.25rem; }
+.btn-effacer { min-height: 48px; flex: 1; background: var(--rouge); color: #fff; border: 0; font: inherit; font-weight: 700; cursor: pointer; }
+.btn-envoyer-pale { min-height: 48px; flex: 1; background: #e4e1d9; color: #a9a59b; border: 0; font: inherit; cursor: pointer; }
+
+.erreur-vague { padding: 0.75rem; background: var(--rouge); color: #fff; font-weight: 700; }
+
+.popup-news {
+  position: fixed;
+  inset: auto 1rem 1rem auto;
+  z-index: 55;
+  width: min(22rem, calc(100% - 2rem));
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.45);
+}
+.popup-news h2 { font-size: 1.15rem; }
+.popup-news p { margin-top: 0.4rem; font-size: 0.9rem; }
+.popup-news .close-mini { position: absolute; top: 4px; right: 4px; width: 12px; height: 12px; padding: 0; font-size: 9px; line-height: 1; background: none; border: 0; color: #ccc; cursor: pointer; }
+
+/* ---------- Version avec UX ---------- */
+.avec-ux .salon-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.75rem; font-weight: 500; border-radius: 4px; }
+.avec-ux .salon-nav a:hover { background: rgba(247, 242, 232, 0.12); }
+.avec-ux .salon-nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--laiton); text-underline-offset: 6px; }
+
+.field { display: grid; gap: 0.3rem; }
+.field label { font-weight: 600; }
+.field .opt { font-weight: 400; color: var(--texte-2); }
+.field .hint { font-size: 0.85rem; color: var(--texte-2); }
+.field .err { font-size: 0.875rem; color: var(--rouge); font-weight: 500; }
+.field .err:empty { display: none; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--rouge); box-shadow: 0 0 0 1px var(--rouge); }
+
+.btn-main { min-height: 48px; padding: 0 1.75rem; justify-self: start; background: var(--vert-salon); color: var(--creme); border: 0; border-radius: 6px; font: inherit; font-weight: 600; cursor: pointer; }
+.btn-main:hover { background: #142a21; }
+
+.resume-erreurs { padding: 1rem; border: 2px solid var(--rouge); border-radius: 6px; background: #fff6f5; }
+.resume-erreurs h2 { font-size: 1rem; }
+.resume-erreurs ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.resume-erreurs a { color: var(--rouge); }
+
+.succes { padding: 1rem 1.25rem; border: 2px solid var(--ok); border-radius: 6px; background: #eef7f0; }
+.succes h2 { font-size: 1.1rem; color: var(--ok); }
+.succes p { margin-top: 0.35rem; }
+
+.infos { padding: 1.5rem; background: #fffdf9; border: 1px solid var(--bord); border-radius: 6px; align-self: start; }
+.infos h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; }
+.infos dl { margin: 1rem 0 0; display: grid; gap: 0.75rem; }
+.infos dt { font-weight: 600; }
+.infos dd { margin: 0; color: var(--texte-2); }
+.infos a { color: var(--vert-salon); }
+
+@media (min-width: 52rem) {
+  .avec-ux .salon-grid { grid-template-columns: 1.4fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+.check-line { display: flex; gap: 0.6rem; align-items: center; min-height: 44px; font-weight: 400 !important; }
+.form .check-line input { width: 1.25rem; min-height: 0; accent-color: var(--vert-salon); }

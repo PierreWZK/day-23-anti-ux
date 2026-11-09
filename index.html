@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti-UX · Le musée des erreurs d’interface</title>
+  <meta name="description" content="Un musée où l’on subit 37 erreurs d’interface pour de vrai, puis où on les répare d’un geste. Gratuit, sans inscription.">
+  <meta name="theme-color" content="#f4efe6">
+  <link rel="canonical" href="https://anti-ux.projectp.fr/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anti-UX">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Anti-UX · Le musée des erreurs d’interface">
+  <meta property="og:description" content="Un musée où l’on subit 37 erreurs d’interface pour de vrai, puis où on les répare d’un geste. Gratuit, sans inscription.">
+  <meta property="og:url" content="https://anti-ux.projectp.fr/">
+  <meta property="og:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-UX, le musée des erreurs d’interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anti-UX · Le musée des erreurs d’interface">
+  <meta name="twitter:description" content="Un musée où l’on subit 37 erreurs d’interface pour de vrai, puis où on les répare d’un geste. Gratuit, sans inscription.">
+  <meta name="twitter:image" content="https://anti-ux.projectp.fr/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Anti-UX",
+    "url": "https://anti-ux.projectp.fr/",
+    "description": "Le musée des erreurs d’interface : 37 salles où l’on subit une erreur d’UX, puis où on la répare.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "fr",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "isPartOf": { "@type": "WebSite", "name": "ProjectP · 30 jours, 30 projets", "url": "https://projectp.fr/" }
+  }
+  </script>
+</head>
+<body class="page-accueil">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Anti-UX, retour à l’accueil">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="logo-text">Anti-UX</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#plan">Plan</a>
+        <a href="index.html#piece-maitresse">Pièce maîtresse</a>
+        <a href="index.html#frustrometre">Frustromètre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker"><span class="inv">Entrée libre</span> <span>37 salles · 6 ailes</span></p>
+          <h1>Le musée des erreurs d’interface</h1>
+          <p class="hero-lede">Chaque œuvre exposée est une erreur d’UX qu’on essaie pour de vrai. On la subit, puis la vitrine voisine montre la version réparée, avec la règle à retenir.</p>
+          <div class="hero-actions">
+            <a class="btn-museum" href="salles/boutons.html">Entrer dans le musée <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn-museum btn-ghost" href="#piece-maitresse">Voir la pièce maîtresse</a>
+          </div>
+          <p class="progress progress-home" data-total="37">0 salle visitée sur 37</p>
+        </div>
+
+        <figure class="hero-oeuvre" aria-labelledby="hero-cartel">
+          <div class="cadre">
+            <div class="oeuvre">
+              <p class="oeuvre-q">Valider la commande ?</p>
+              <span class="oeuvre-btn" aria-hidden="true">Cliquez ici</span>
+              <span class="oeuvre-cursor" aria-hidden="true"></span>
+              <p class="oeuvre-count">Commandes envoyées : <strong>3</strong></p>
+            </div>
+          </div>
+          <figcaption class="cartel cartel-mini" id="hero-cartel">
+            <span class="cartel-num">N° 01</span>
+            <strong>Le bouton muet</strong>
+            <span>HTML sans retour visuel, vers 2009. Il a été cliqué trois fois, trois commandes sont parties.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="visite" aria-labelledby="titre-visite">
+      <div class="container">
+        <h2 id="titre-visite" class="sr-only">Comment visiter</h2>
+        <ol class="visite-steps">
+          <li><span class="inv">1</span><strong>Subissez le piège.</strong> Chaque vitrine de gauche contient une interface ratée, à essayer pour de vrai.</li>
+          <li><span class="inv">2</span><strong>Ouvrez la vitrine réparée.</strong> Elle se déverrouille dès que le piège a fait effet.</li>
+          <li><span class="inv">3</span><strong>Lisez le cartel.</strong> Pourquoi ça ne va pas, la règle à retenir et sa source.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="piece-maitresse" id="piece-maitresse" aria-labelledby="titre-coiffeur">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="inv">Pièce maîtresse</span> <span>Exposition permanente</span></p>
+          <h2 id="titre-coiffeur">Coiffeur Antique, un site en deux versions</h2>
+          <p>Le même salon de coiffure, la même page de contact. L’une cumule les erreurs des salles, l’autre les corrige toutes. Ouvrez les deux et comparez.</p>
+        </header>
+        <div class="diptyque">
+          <a class="panneau panneau-sans" href="coiffeur/sans-ux.html">
+            <span class="cadre cadre-sm" aria-hidden="true">
+              <span class="mock mock-sans">
+                <span class="mock-nav"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="mock-banner"></span>
+                <span class="mock-field"></span><span class="mock-field"></span><span class="mock-field"></span><span class="mock-field"></span>
+                <span class="mock-btn"></span>
+              </span>
+            </span>
+            <span class="panneau-text">
+              <span class="tag tag-piege"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Sans UX</span>
+              <strong>Onze liens dans l’en-tête, des cookies imposés, un formulaire interminable.</strong>
+              <span class="panneau-link">Visiter la version ratée <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+          <a class="panneau panneau-avec" href="coiffeur/avec-ux.html">
+            <span class="cadre cadre-sm" aria-hidden="true">
+              <span class="mock mock-avec">
+                <span class="mock-nav"><i></i><i></i><i></i></span>
+                <span class="mock-title"></span>
+                <span class="mock-field"></span><span class="mock-field"></span>
+                <span class="mock-btn"></span>
+              </span>
+            </span>
+            <span class="panneau-text">
+              <span class="tag tag-repare"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Avec UX</span>
+              <strong>Quatre liens, quatre champs, des retours clairs. On prend rendez-vous en trente secondes.</strong>
+              <span class="panneau-link">Visiter la version réparée <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan" id="plan" aria-labelledby="titre-plan">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="inv">Plan du musée</span> <span>37 salles</span></p>
+          <h2 id="titre-plan">Six ailes, une erreur par salle</h2>
+          <p>Suivez le parcours dans l’ordre, ou entrez directement dans la salle qui vous intéresse. Les salles visitées sont marquées.</p>
+        </header>
+
+        <section class="aile" id="aile-a" aria-labelledby="titre-aile-A">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">A</p>
+            <div>
+              <h3 id="titre-aile-A">Aile A · Gestes et boutons</h3>
+              <p>Ce qu’on touche doit répondre, et ce qu’on casse doit pouvoir se réparer.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/boutons.html" data-slug="boutons">
+                <span class="salle-num inv">01</span>
+                <span class="salle-title">Le bouton muet</span>
+                <span class="salle-card-text">Un bouton qui ne dit rien : on reclique, la commande part trois fois.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/haptique.html" data-slug="haptique">
+                <span class="salle-num inv">02</span>
+                <span class="salle-title">Le clavier qui vibre</span>
+                <span class="salle-card-text">Des vibrations à chaque touche, sans retour visuel.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/favoris.html" data-slug="favoris">
+                <span class="salle-num inv">03</span>
+                <span class="salle-title">Le favori en trois étapes</span>
+                <span class="salle-card-text">Trois étapes pour un simple favori.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/notation.html" data-slug="notation">
+                <span class="salle-num inv">04</span>
+                <span class="salle-title">La note sous condition</span>
+                <span class="salle-card-text">Une note perdue faute de commentaire obligatoire.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/zoom.html" data-slug="zoom">
+                <span class="salle-num inv">05</span>
+                <span class="salle-title">Le zoom sans frein</span>
+                <span class="salle-card-text">Un zoom bloqué, ou incontrôlable.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/suppression.html" data-slug="suppression">
+                <span class="salle-num inv">06</span>
+                <span class="salle-title">La corbeille piégée</span>
+                <span class="salle-card-text">Supprimé d’un geste, sans retour possible.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aile" id="aile-b" aria-labelledby="titre-aile-B">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">B</p>
+            <div>
+              <h3 id="titre-aile-B">Aile B · Saisie et formulaires</h3>
+              <p>Remplir un formulaire ne devrait jamais ressembler à un examen.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/textes.html" data-slug="textes">
+                <span class="salle-num inv">07</span>
+                <span class="salle-title">Le texte d’exemple qui sert d’étiquette</span>
+                <span class="salle-card-text">L’intitulé caché dans le champ disparaît dès la première lettre.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/formulaires.html" data-slug="formulaires">
+                <span class="salle-num inv">08</span>
+                <span class="salle-title">L’erreur vague</span>
+                <span class="salle-card-text">Un « Erreur » en haut du formulaire, et débrouillez-vous.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/erreurs.html" data-slug="erreurs">
+                <span class="salle-num inv">09</span>
+                <span class="salle-title">Le formulaire qui efface tout</span>
+                <span class="salle-card-text">Un message vague, et toutes les saisies effacées.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/validation-anticipe.html" data-slug="validation-anticipe">
+                <span class="salle-num inv">10</span>
+                <span class="salle-title">Le validateur pressé</span>
+                <span class="salle-card-text">Une erreur rouge dès la première lettre tapée.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/validation-personnalisee.html" data-slug="validation-personnalisee">
+                <span class="salle-num inv">11</span>
+                <span class="salle-title">Le code en six cases</span>
+                <span class="salle-card-text">Six cases pour un code, collage impossible.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/cache-saisi.html" data-slug="cache-saisi">
+                <span class="salle-num inv">12</span>
+                <span class="salle-title">Le brouillon perdu</span>
+                <span class="salle-card-text">Un rechargement, et le texte disparaît.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/aide-inline.html" data-slug="aide-inline">
+                <span class="salle-num inv">13</span>
+                <span class="salle-title">L’aide qui fait quitter la page</span>
+                <span class="salle-card-text">L’aide ouvre une autre page et fait perdre le fil.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/resume-commande.html" data-slug="resume-commande">
+                <span class="salle-num inv">14</span>
+                <span class="salle-title">Les frais surprises</span>
+                <span class="salle-card-text">Des frais surprises au moment de payer.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aile" id="aile-c" aria-labelledby="titre-aile-C">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">C</p>
+            <div>
+              <h3 id="titre-aile-C">Aile C · Navigation et repères</h3>
+              <p>Savoir où l’on est, d’où l’on vient et comment en sortir.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/navigation.html" data-slug="navigation">
+                <span class="salle-num inv">15</span>
+                <span class="salle-title">Le menu qui se ferme tout seul</span>
+                <span class="salle-card-text">Un menu qui se referme avant qu’on ait choisi.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/navigation-contextuelle.html" data-slug="navigation-contextuelle">
+                <span class="salle-num inv">16</span>
+                <span class="salle-title">La barre d’outils figée</span>
+                <span class="salle-card-text">Des actions inutiles et des libellés figés.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/historique-nav.html" data-slug="historique-nav">
+                <span class="salle-num inv">17</span>
+                <span class="salle-title">Le retour qui efface</span>
+                <span class="salle-card-text">Le bouton Retour fait tout perdre.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/distillation.html" data-slug="distillation">
+                <span class="salle-num inv">18</span>
+                <span class="salle-title">La liste interminable</span>
+                <span class="salle-card-text">Une liste de 60 villes, sans recherche.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/recherche-autocomplet.html" data-slug="recherche-autocomplet">
+                <span class="salle-num inv">19</span>
+                <span class="salle-title">L’autocomplétion sponsorisée</span>
+                <span class="salle-card-text">Des suggestions hors sujet qui changent d’ordre.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/priorite.html" data-slug="priorite">
+                <span class="salle-num inv">20</span>
+                <span class="salle-title">Les douze boutons</span>
+                <span class="salle-card-text">Dix boutons du même poids, aucun repère.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/lecture-seule.html" data-slug="lecture-seule">
+                <span class="salle-num inv">21</span>
+                <span class="salle-title">L’article envahi</span>
+                <span class="salle-card-text">Des pop-ups et des bandeaux par-dessus le texte.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aile" id="aile-d" aria-labelledby="titre-aile-D">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">D</p>
+            <div>
+              <h3 id="titre-aile-D">Aile D · Retours et états</h3>
+              <p>Une interface qui se tait laisse croire qu’elle est en panne.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/retours.html" data-slug="retours">
+                <span class="salle-num inv">22</span>
+                <span class="salle-title">Le sablier éternel</span>
+                <span class="salle-card-text">Un sablier éternel, sans durée ni annulation.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/chargement.html" data-slug="chargement">
+                <span class="salle-num inv">23</span>
+                <span class="salle-title">Le chargement aveugle</span>
+                <span class="salle-card-text">Un écran blanc, aucune idée de la durée.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/progression.html" data-slug="progression">
+                <span class="salle-num inv">24</span>
+                <span class="salle-title">La barre de progression muette</span>
+                <span class="salle-card-text">Une barre de progression muette pour les lecteurs d’écran.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/activite.html" data-slug="activite">
+                <span class="salle-num inv">25</span>
+                <span class="salle-title">L’écran figé</span>
+                <span class="salle-card-text">Un long traitement sans signe de vie.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/sauvegarde.html" data-slug="sauvegarde">
+                <span class="salle-num inv">26</span>
+                <span class="salle-title">La sauvegarde qui bloque</span>
+                <span class="salle-card-text">Une sauvegarde automatique qui bloque l’écran.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/statut-multi.html" data-slug="statut-multi">
+                <span class="salle-num inv">27</span>
+                <span class="salle-title">L’écrasement silencieux</span>
+                <span class="salle-card-text">Un conflit découvert après l’enregistrement.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/session.html" data-slug="session">
+                <span class="salle-num inv">28</span>
+                <span class="salle-title">La session expirée</span>
+                <span class="salle-card-text">Session expirée, retour à zéro.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/reexperience.html" data-slug="reexperience">
+                <span class="salle-num inv">29</span>
+                <span class="salle-title">Le paiement à refaire</span>
+                <span class="salle-card-text">Le paiement échoue, tout est à refaire.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aile" id="aile-e" aria-labelledby="titre-aile-E">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">E</p>
+            <div>
+              <h3 id="titre-aile-E">Aile E · Lisibilité et attention</h3>
+              <p>Ce qui ne se lit pas n’existe pas. Ce qui crie tout le temps non plus.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/lisibilite.html" data-slug="lisibilite">
+                <span class="salle-num inv">30</span>
+                <span class="salle-title">Le gris sur gris</span>
+                <span class="salle-card-text">L’information importante écrite en gris clair sur blanc.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/nouveaute.html" data-slug="nouveaute">
+                <span class="salle-num inv">31</span>
+                <span class="salle-title">Le badge « Nouveau ! » partout</span>
+                <span class="salle-card-text">Des badges clignotants partout, qui reviennent sans cesse.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/priorite-notif.html" data-slug="priorite-notif">
+                <span class="salle-num inv">32</span>
+                <span class="salle-title">Tout en rouge</span>
+                <span class="salle-card-text">Tout est en rouge, donc rien n’est urgent.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/rappel.html" data-slug="rappel">
+                <span class="salle-num inv">33</span>
+                <span class="salle-title">Les rappels imposés</span>
+                <span class="salle-card-text">Des rappels imposés, sans réglage.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aile" id="aile-f" aria-labelledby="titre-aile-F">
+          <header class="aile-head">
+            <p class="aile-letter" aria-hidden="true">F</p>
+            <div>
+              <h3 id="titre-aile-F">Aile F · Confiance et pièges</h3>
+              <p>Les pièges commerciaux, ou l’art de faire dire oui.</p>
+            </div>
+          </header>
+          <ol class="salles-grid">
+            <li>
+              <a class="salle-card" href="salles/pieges.html" data-slug="pieges">
+                <span class="salle-num inv">34</span>
+                <span class="salle-title">La bannière de cookies piégée</span>
+                <span class="salle-card-text">Refuser les cookies demande quatre écrans.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/cookies.html" data-slug="cookies">
+                <span class="salle-num inv">35</span>
+                <span class="salle-title">Les cookies déjà posés</span>
+                <span class="salle-card-text">Des traceurs posés avant même votre choix.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/securite.html" data-slug="securite">
+                <span class="salle-num inv">36</span>
+                <span class="salle-title">Le paiement sans repère</span>
+                <span class="salle-card-text">Aucune indication sur qui traite votre carte.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="salle-card" href="salles/export.html" data-slug="export">
+                <span class="salle-num inv">37</span>
+                <span class="salle-title">L’export par courrier</span>
+                <span class="salle-card-text">Un courrier papier pour récupérer ses données.</span>
+                <span class="salle-state" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </section>
+
+    <section class="frustrometre" id="frustrometre" aria-labelledby="titre-frustro">
+      <div class="container frustro-inner">
+        <div>
+          <p class="kicker"><span class="inv">Frustromètre</span></p>
+          <h2 id="titre-frustro">Votre colère, mesurée</h2>
+          <p>Le musée compte vos clics rageurs : trois clics rapides au même endroit. Plus il monte, plus la salle a bien fait son travail.</p>
+        </div>
+        <p class="score-card"><span class="score-value" aria-live="polite">0</span> <span class="score-label">clics rageurs depuis votre arrivée</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="logo-mark" aria-hidden="true">A</span> Anti-UX, le musée des erreurs d’interface</p>
+      <p>Les pièges sont simulés et confinés à leur vitrine : rien n’est envoyé, rien ne sort de la page.</p>
+      <p>Jour 23 du défi <a href="https://projectp.fr/" target="_blank" rel="noopener">30 jours, 30 projets</a> · © 2026 Pierre WZK</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
