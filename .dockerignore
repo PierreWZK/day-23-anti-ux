@@ -2,7 +2,9 @@
 .impeccable
 node_modules
 docs
-scripts
+scripts/build
+scripts/og
+scripts/create_specimens.py
 tests
 *.md
 *.ts
