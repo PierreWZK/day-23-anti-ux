@@ -1,6 +1,14 @@
 # Anti-UX · Le musée des erreurs d'interface
 
-> Jour 23 du défi **30 jours, 30 projets** · JavaScript · CSS · ⏳ **À venir**
+🌐 **[anti-ux.projectp.fr](https://anti-ux.projectp.fr/)** · Jour 23 du défi **[30 jours, 30 projets](https://projectp.fr/)** · [Dépôt du défi](https://github.com/PierreWZK/30DaysProjects)
+
+Stack : JavaScript, CSS.
+
+[![Page d'accueil d'Anti-UX](docs/preview-accueil.png)](https://anti-ux.projectp.fr/)
+
+<p align="center">
+  <img src="docs/preview-mobile.png" alt="Anti-UX sur téléphone" width="260">
+</p>
 
 Un site qui apprend l'UX par l'absurde. **Anti-UX** expose, salle par salle, tout ce qu'il ne faut pas faire sur un site web : des boutons qui ne répondent pas, des boutons mal hiérarchisés, des champs de texte qui effacent votre saisie, des formulaires qui cachent leurs règles, des bannières de cookies impossibles à refuser. Chaque erreur est exposée dans une **salle** qu'on essaie pour de vrai, puis qu'on **répare** d'un geste pour voir la bonne version, avec l'explication et la règle à retenir.
 
@@ -55,3 +63,13 @@ JavaScript (modules ES) · CSS, sans framework · Playwright pour les tests.
 - **Indexation** : `robots.txt`, `sitemap.xml`, balise canonical, données structurées JSON-LD (`WebApplication` rattachée à ProjectP) et lien « 30 jours, 30 projets » vers https://projectp.fr/ dans le pied de page. Vérifier en ligne, puis me rappeler de soumettre `https://anti-ux.projectp.fr/sitemap.xml` dans Google Search Console.
 - **Aperçu du lien** : image Open Graph stylisée 1200 × 630 aux couleurs du projet et balises `og:*` / `twitter:card`, vérifiées en ligne.
 - **Vitrine** : la mise à jour de `30days30projects` (README et `projects.js`) se fait **après ma validation**.
+---
+
+## Le défi 30 jours, 30 projets
+
+Un projet complet par jour pendant 30 jours, chacun en ligne sur son propre sous-domaine.
+
+- 🗂️ **Tous les projets** : [projectp.fr](https://projectp.fr/)
+- 💻 **Le dépôt du défi** : [github.com/PierreWZK/30DaysProjects](https://github.com/PierreWZK/30DaysProjects)
+- ⬅️ **Jour précédent** : [THE LAST HUMAN, incremental](https://thelasthuman.projectp.fr/)
+- ➡️ **Jour suivant** : [Dactyle, jeu de frappe](https://dactyle.projectp.fr/)
